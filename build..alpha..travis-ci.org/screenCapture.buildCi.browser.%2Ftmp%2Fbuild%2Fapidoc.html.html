@@ -1,0 +1,5883 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="http://cylonjs.com">cylon (v1.3.0)</a>
+</h1>
+<h4>JavaScript framework for robotics, drones, and the Internet of Things (IoT) using Node.js</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon">module cylon</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Adaptor">
+            function <span class="apidocSignatureSpan">cylon.</span>Adaptor
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Driver">
+            function <span class="apidocSignatureSpan">cylon.</span>Driver
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin">
+            function <span class="apidocSignatureSpan">cylon.</span>IO.DigitalPin
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Robot">
+            function <span class="apidocSignatureSpan">cylon.</span>Robot
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.api">
+            function <span class="apidocSignatureSpan">cylon.</span>api
+            <span class="apidocSignatureSpan">(Server, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.basestar">
+            function <span class="apidocSignatureSpan">cylon.</span>basestar
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.config">
+            function <span class="apidocSignatureSpan">cylon.</span>config
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.halt">
+            function <span class="apidocSignatureSpan">cylon.</span>halt
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.robot">
+            function <span class="apidocSignatureSpan">cylon.</span>robot
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.start">
+            function <span class="apidocSignatureSpan">cylon.</span>start
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.</span>Adaptor.__super__</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.</span>Adaptor.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.</span>Driver.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.</span>IO</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.</span>IO.DigitalPin.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.</span>IO.Utils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.</span>Logger</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.</span>MCP</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.</span>Robot.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.</span>Utils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.</span>helpers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.</span>monkey_patches</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.</span>registry</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.</span>validator</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon.Adaptor">module cylon.Adaptor</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">cylon.Adaptor.</span>usingDomains</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Adaptor.Adaptor">
+            function <span class="apidocSignatureSpan">cylon.</span>Adaptor
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Adaptor.EventEmitter">
+            function <span class="apidocSignatureSpan">cylon.Adaptor.</span>EventEmitter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Adaptor.init">
+            function <span class="apidocSignatureSpan">cylon.Adaptor.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Adaptor.listenerCount">
+            function <span class="apidocSignatureSpan">cylon.Adaptor.</span>listenerCount
+            <span class="apidocSignatureSpan">(emitter, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cylon.Adaptor.</span>defaultMaxListeners</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.Adaptor.</span>__super__</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon.Adaptor.__super__">module cylon.Adaptor.__super__</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Adaptor.__super__._proxyEvents">
+            function <span class="apidocSignatureSpan">cylon.Adaptor.__super__.</span>_proxyEvents
+            <span class="apidocSignatureSpan">(opts, source, target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Adaptor.__super__.constructor">
+            function <span class="apidocSignatureSpan">cylon.Adaptor.__super__.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Adaptor.__super__.defineAdaptorEvent">
+            function <span class="apidocSignatureSpan">cylon.Adaptor.__super__.</span>defineAdaptorEvent
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Adaptor.__super__.defineDriverEvent">
+            function <span class="apidocSignatureSpan">cylon.Adaptor.__super__.</span>defineDriverEvent
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Adaptor.__super__.defineEvent">
+            function <span class="apidocSignatureSpan">cylon.Adaptor.__super__.</span>defineEvent
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Adaptor.__super__.proxyMethods">
+            function <span class="apidocSignatureSpan">cylon.Adaptor.__super__.</span>proxyMethods
+            <span class="apidocSignatureSpan">(methods, target, base, force)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Adaptor.__super__.respond">
+            function <span class="apidocSignatureSpan">cylon.Adaptor.__super__.</span>respond
+            <span class="apidocSignatureSpan">(event, callback, err)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon.Adaptor.prototype">module cylon.Adaptor.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Adaptor.prototype.connect">
+            function <span class="apidocSignatureSpan">cylon.Adaptor.prototype.</span>connect
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Adaptor.prototype.constructor">
+            function <span class="apidocSignatureSpan">cylon.Adaptor.prototype.</span>constructor
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Adaptor.prototype.disconnect">
+            function <span class="apidocSignatureSpan">cylon.Adaptor.prototype.</span>disconnect
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Adaptor.prototype.toJSON">
+            function <span class="apidocSignatureSpan">cylon.Adaptor.prototype.</span>toJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon.Driver">module cylon.Driver</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">cylon.Driver.</span>usingDomains</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Driver.Driver">
+            function <span class="apidocSignatureSpan">cylon.</span>Driver
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Driver.EventEmitter">
+            function <span class="apidocSignatureSpan">cylon.Driver.</span>EventEmitter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Driver.init">
+            function <span class="apidocSignatureSpan">cylon.Driver.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Driver.listenerCount">
+            function <span class="apidocSignatureSpan">cylon.Driver.</span>listenerCount
+            <span class="apidocSignatureSpan">(emitter, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cylon.Driver.</span>defaultMaxListeners</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.Driver.</span>__super__</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon.Driver.prototype">module cylon.Driver.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Driver.prototype.constructor">
+            function <span class="apidocSignatureSpan">cylon.Driver.prototype.</span>constructor
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Driver.prototype.halt">
+            function <span class="apidocSignatureSpan">cylon.Driver.prototype.</span>halt
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Driver.prototype.setupCommands">
+            function <span class="apidocSignatureSpan">cylon.Driver.prototype.</span>setupCommands
+            <span class="apidocSignatureSpan">(commands, proxy)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Driver.prototype.start">
+            function <span class="apidocSignatureSpan">cylon.Driver.prototype.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Driver.prototype.toJSON">
+            function <span class="apidocSignatureSpan">cylon.Driver.prototype.</span>toJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon.IO">module cylon.IO</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin">
+            function <span class="apidocSignatureSpan">cylon.IO.</span>DigitalPin
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.IO.</span>Utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon.IO.DigitalPin">module cylon.IO.DigitalPin</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">cylon.IO.DigitalPin.</span>usingDomains</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.DigitalPin">
+            function <span class="apidocSignatureSpan">cylon.IO.</span>DigitalPin
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.EventEmitter">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.</span>EventEmitter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.init">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.listenerCount">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.</span>listenerCount
+            <span class="apidocSignatureSpan">(emitter, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cylon.IO.DigitalPin.</span>defaultMaxListeners</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.IO.DigitalPin.</span>__super__</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon.IO.DigitalPin.prototype">module cylon.IO.DigitalPin.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.prototype._closeCallback">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>_closeCallback
+            <span class="apidocSignatureSpan">(err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.prototype._createGPIOPin">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>_createGPIOPin
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.prototype._directionPath">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>_directionPath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.prototype._exportPath">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>_exportPath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.prototype._openPin">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>_openPin
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.prototype._pinPath">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>_pinPath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.prototype._setMode">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>_setMode
+            <span class="apidocSignatureSpan">(mode, emitConnect)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.prototype._setModeCallback">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>_setModeCallback
+            <span class="apidocSignatureSpan">(err, emitConnect)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.prototype._unexportPath">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>_unexportPath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.prototype._valuePath">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>_valuePath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.prototype.close">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>close
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.prototype.closeSync">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>closeSync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.prototype.connect">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>connect
+            <span class="apidocSignatureSpan">(mode)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.prototype.constructor">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>constructor
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.prototype.digitalRead">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>digitalRead
+            <span class="apidocSignatureSpan">(interval)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.prototype.digitalWrite">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>digitalWrite
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.prototype.setHigh">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>setHigh
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.prototype.setLow">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>setLow
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.DigitalPin.prototype.toggle">
+            function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>toggle
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon.IO.Utils">module cylon.IO.Utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.IO.Utils.periodAndDuty">
+            function <span class="apidocSignatureSpan">cylon.IO.Utils.</span>periodAndDuty
+            <span class="apidocSignatureSpan">(scaledDuty, freq, pulseWidth, polarity)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon.Logger">module cylon.Logger</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Logger.debug">
+            function <span class="apidocSignatureSpan">cylon.Logger.</span>debug
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Logger.error">
+            function <span class="apidocSignatureSpan">cylon.Logger.</span>error
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Logger.fatal">
+            function <span class="apidocSignatureSpan">cylon.Logger.</span>fatal
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Logger.info">
+            function <span class="apidocSignatureSpan">cylon.Logger.</span>info
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Logger.log">
+            function <span class="apidocSignatureSpan">cylon.Logger.</span>log
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Logger.logger">
+            function <span class="apidocSignatureSpan">cylon.Logger.</span>logger
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Logger.setup">
+            function <span class="apidocSignatureSpan">cylon.Logger.</span>setup
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Logger.warn">
+            function <span class="apidocSignatureSpan">cylon.Logger.</span>warn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.Logger.</span>should</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon.MCP">module cylon.MCP</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.MCP.create">
+            function <span class="apidocSignatureSpan">cylon.MCP.</span>create
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.MCP.halt">
+            function <span class="apidocSignatureSpan">cylon.MCP.</span>halt
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.MCP.start">
+            function <span class="apidocSignatureSpan">cylon.MCP.</span>start
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.MCP.toJSON">
+            function <span class="apidocSignatureSpan">cylon.MCP.</span>toJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cylon.MCP.</span>_eventsCount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.MCP.</span>_events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.MCP.</span>commands</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.MCP.</span>domain</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.MCP.</span>events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.MCP.</span>robots</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon.Robot">module cylon.Robot</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">cylon.Robot.</span>usingDomains</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Robot.Robot">
+            function <span class="apidocSignatureSpan">cylon.</span>Robot
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Robot.EventEmitter">
+            function <span class="apidocSignatureSpan">cylon.Robot.</span>EventEmitter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Robot.init">
+            function <span class="apidocSignatureSpan">cylon.Robot.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Robot.listenerCount">
+            function <span class="apidocSignatureSpan">cylon.Robot.</span>listenerCount
+            <span class="apidocSignatureSpan">(emitter, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cylon.Robot.</span>defaultMaxListeners</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.Robot.</span>__super__</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon.Robot.prototype">module cylon.Robot.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Robot.prototype.connection">
+            function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>connection
+            <span class="apidocSignatureSpan">(name, conn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Robot.prototype.constructor">
+            function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>constructor
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Robot.prototype.device">
+            function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>device
+            <span class="apidocSignatureSpan">(name, device)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Robot.prototype.halt">
+            function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>halt
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Robot.prototype.initRobot">
+            function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>initRobot
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Robot.prototype.log">
+            function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>log
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Robot.prototype.start">
+            function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>start
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Robot.prototype.startConnection">
+            function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>startConnection
+            <span class="apidocSignatureSpan">(connection, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Robot.prototype.startConnections">
+            function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>startConnections
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Robot.prototype.startDevice">
+            function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>startDevice
+            <span class="apidocSignatureSpan">(device, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Robot.prototype.startDevices">
+            function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>startDevices
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Robot.prototype.startWork">
+            function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>startWork
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Robot.prototype.toJSON">
+            function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>toJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Robot.prototype.toString">
+            function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon.Utils">module cylon.Utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Utils.after">
+            function <span class="apidocSignatureSpan">cylon.Utils.</span>after
+            <span class="apidocSignatureSpan">(delay, action)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Utils.bootstrap">
+            function <span class="apidocSignatureSpan">cylon.Utils.</span>bootstrap
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Utils.classCallCheck">
+            function <span class="apidocSignatureSpan">cylon.Utils.</span>classCallCheck
+            <span class="apidocSignatureSpan">(instance, Constructor)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Utils.constantly">
+            function <span class="apidocSignatureSpan">cylon.Utils.</span>constantly
+            <span class="apidocSignatureSpan">(action)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Utils.every">
+            function <span class="apidocSignatureSpan">cylon.Utils.</span>every
+            <span class="apidocSignatureSpan">(interval, action)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Utils.fetch">
+            function <span class="apidocSignatureSpan">cylon.Utils.</span>fetch
+            <span class="apidocSignatureSpan">(obj, property, fallback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Utils.finish">
+            function <span class="apidocSignatureSpan">cylon.Utils.</span>finish
+            <span class="apidocSignatureSpan">(intervalID)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Utils.makeUnique">
+            function <span class="apidocSignatureSpan">cylon.Utils.</span>makeUnique
+            <span class="apidocSignatureSpan">(name, arr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Utils.proxyFunctions">
+            function <span class="apidocSignatureSpan">cylon.Utils.</span>proxyFunctions
+            <span class="apidocSignatureSpan">(source, target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Utils.proxyFunctionsToObject">
+            function <span class="apidocSignatureSpan">cylon.Utils.</span>proxyFunctionsToObject
+            <span class="apidocSignatureSpan">(methods, target, base, force)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Utils.sleep">
+            function <span class="apidocSignatureSpan">cylon.Utils.</span>sleep
+            <span class="apidocSignatureSpan">(ms)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.Utils.subclass">
+            function <span class="apidocSignatureSpan">cylon.Utils.</span>subclass
+            <span class="apidocSignatureSpan">(child, parent)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon.api">module cylon.api</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.api.create">
+            function <span class="apidocSignatureSpan">cylon.api.</span>create
+            <span class="apidocSignatureSpan">(Server, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.api.</span>instances</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon.basestar">module cylon.basestar</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">cylon.basestar.</span>usingDomains</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.basestar.basestar">
+            function <span class="apidocSignatureSpan">cylon.</span>basestar
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.basestar.EventEmitter">
+            function <span class="apidocSignatureSpan">cylon.basestar.</span>EventEmitter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.basestar.init">
+            function <span class="apidocSignatureSpan">cylon.basestar.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.basestar.listenerCount">
+            function <span class="apidocSignatureSpan">cylon.basestar.</span>listenerCount
+            <span class="apidocSignatureSpan">(emitter, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cylon.basestar.</span>defaultMaxListeners</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.basestar.</span>__super__</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon.config">module cylon.config</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">cylon.config.</span>debug</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">cylon.config.</span>silent</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">cylon.config.</span>testMode</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.config.subscribe">
+            function <span class="apidocSignatureSpan">cylon.config.</span>subscribe
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.config.unsubscribe">
+            function <span class="apidocSignatureSpan">cylon.config.</span>unsubscribe
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.config.update">
+            function <span class="apidocSignatureSpan">cylon.config.</span>update
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cylon.config.</span>haltTimeout</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.config.</span>logger</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon.helpers">module cylon.helpers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.helpers.arity">
+            function <span class="apidocSignatureSpan">cylon.helpers.</span>arity
+            <span class="apidocSignatureSpan">(fn, n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.helpers.each">
+            function <span class="apidocSignatureSpan">cylon.helpers.</span>each
+            <span class="apidocSignatureSpan">(thing, fn, thisVal)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.helpers.extend">
+            function <span class="apidocSignatureSpan">cylon.helpers.</span>extend
+            <span class="apidocSignatureSpan">(base, source)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.helpers.identity">
+            function <span class="apidocSignatureSpan">cylon.helpers.</span>identity
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.helpers.includes">
+            function <span class="apidocSignatureSpan">cylon.helpers.</span>includes
+            <span class="apidocSignatureSpan">(arr, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.helpers.invoke">
+            function <span class="apidocSignatureSpan">cylon.helpers.</span>invoke
+            <span class="apidocSignatureSpan">(collection, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.helpers.isArguments">
+            function <span class="apidocSignatureSpan">cylon.helpers.</span>isArguments
+            <span class="apidocSignatureSpan">(thing)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.helpers.isArray">
+            function <span class="apidocSignatureSpan">cylon.helpers.</span>isArray
+            <span class="apidocSignatureSpan">(thing)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.helpers.isFunction">
+            function <span class="apidocSignatureSpan">cylon.helpers.</span>isFunction
+            <span class="apidocSignatureSpan">(thing)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.helpers.isNumber">
+            function <span class="apidocSignatureSpan">cylon.helpers.</span>isNumber
+            <span class="apidocSignatureSpan">(thing)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.helpers.isObject">
+            function <span class="apidocSignatureSpan">cylon.helpers.</span>isObject
+            <span class="apidocSignatureSpan">(thing)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.helpers.isObjectLoose">
+            function <span class="apidocSignatureSpan">cylon.helpers.</span>isObjectLoose
+            <span class="apidocSignatureSpan">(thing)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.helpers.isString">
+            function <span class="apidocSignatureSpan">cylon.helpers.</span>isString
+            <span class="apidocSignatureSpan">(thing)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.helpers.isUndefined">
+            function <span class="apidocSignatureSpan">cylon.helpers.</span>isUndefined
+            <span class="apidocSignatureSpan">(thing)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.helpers.map">
+            function <span class="apidocSignatureSpan">cylon.helpers.</span>map
+            <span class="apidocSignatureSpan">(collection, fn, thisVal)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.helpers.parallel">
+            function <span class="apidocSignatureSpan">cylon.helpers.</span>parallel
+            <span class="apidocSignatureSpan">(functions, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.helpers.partial">
+            function <span class="apidocSignatureSpan">cylon.helpers.</span>partial
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.helpers.partialRight">
+            function <span class="apidocSignatureSpan">cylon.helpers.</span>partialRight
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.helpers.pluck">
+            function <span class="apidocSignatureSpan">cylon.helpers.</span>pluck
+            <span class="apidocSignatureSpan">(collection, key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.helpers.reduce">
+            function <span class="apidocSignatureSpan">cylon.helpers.</span>reduce
+            <span class="apidocSignatureSpan">(collection, iteratee, accumulator, thisVal)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.helpers.series">
+            function <span class="apidocSignatureSpan">cylon.helpers.</span>series
+            <span class="apidocSignatureSpan">(functions, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon.monkey_patches">module cylon.monkey_patches</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.monkey_patches.install">
+            function <span class="apidocSignatureSpan">cylon.monkey_patches.</span>install
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.monkey_patches.uninstall">
+            function <span class="apidocSignatureSpan">cylon.monkey_patches.</span>uninstall
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon.registry">module cylon.registry</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.registry.findBy">
+            function <span class="apidocSignatureSpan">cylon.registry.</span>findBy
+            <span class="apidocSignatureSpan">(prop, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.registry.findByModule">
+            function <span class="apidocSignatureSpan">cylon.registry.</span>findByModule
+            <span class="apidocSignatureSpan">(module)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.registry.isModuleInDevelopment">
+            function <span class="apidocSignatureSpan">cylon.registry.</span>isModuleInDevelopment
+            <span class="apidocSignatureSpan">(module)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.registry.logRegistration">
+            function <span class="apidocSignatureSpan">cylon.registry.</span>logRegistration
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.registry.register">
+            function <span class="apidocSignatureSpan">cylon.registry.</span>register
+            <span class="apidocSignatureSpan">(module)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.registry.search">
+            function <span class="apidocSignatureSpan">cylon.registry.</span>search
+            <span class="apidocSignatureSpan">(entry, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cylon.registry.</span>data</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cylon.validator">module cylon.validator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cylon.validator.validate">
+            function <span class="apidocSignatureSpan">cylon.validator.</span>validate
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon" id="apidoc.module.cylon">module cylon</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Adaptor" id="apidoc.element.cylon.Adaptor">
+        function <span class="apidocSignatureSpan">cylon.</span>Adaptor
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Adaptor(opts) {
+  Adaptor.__super__.constructor.apply(this, arguments);
+
+  opts = opts || {};
+
+  this.name = opts.name;
+
+  // the Robot the adaptor belongs to
+  this.robot = opts.robot;
+
+  // some default options
+  this.host = opts.host;
+  this.port = opts.port;
+
+  // misc. details provided in args hash
+  this.details = {};
+
+  _.each(opts, function(opt, name) {
+    if (!_.includes(["robot", "name", "adaptor", "events"], name)) {
+      this.details[name] = opt;
+    }
+  }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Driver" id="apidoc.element.cylon.Driver">
+        function <span class="apidocSignatureSpan">cylon.</span>Driver
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Driver(opts) {
+  Driver.__super__.constructor.apply(this, arguments);
+
+  opts = opts || {};
+
+  this.name = opts.name;
+  this.robot = opts.robot;
+
+  this.connection = opts.connection;
+
+  this.commands = {};
+  this.events = [];
+
+  // some default options
+  this.pin = opts.pin;
+  this.interval = opts.interval || 10;
+
+  this.details = {};
+
+  _.each(opts, function(opt, name) {
+    var banned = ["robot", "name", "connection", "driver", "events"];
+
+    if (!_.includes(banned, name)) {
+      this.details[name] = opt;
+    }
+  }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin" id="apidoc.element.cylon.IO.DigitalPin">
+        function <span class="apidocSignatureSpan">cylon.</span>IO.DigitalPin
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DigitalPin(opts) {
+  this.pinNum = opts.pin.toString();
+  this.status = "low";
+  this.ready = false;
+  this.mode = opts.mode;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Robot" id="apidoc.element.cylon.Robot">
+        function <span class="apidocSignatureSpan">cylon.</span>Robot
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Robot(opts) {
+  Utils.classCallCheck(this, Robot);
+
+  opts = opts || {};
+
+  validator.validate(opts);
+
+  // auto-bind prototype methods
+  for (var prop in Object.getPrototypeOf(this)) {
+    if (this[prop] &amp;&amp; prop !== "constructor") {
+      this[prop] = this[prop].bind(this);
+    }
+  }
+
+  this.initRobot(opts);
+
+  _.each(opts, function(opt, name) {
+    if (this[name] !== undefined) {
+      return;
+    }
+
+    if (_.isFunction(opt)) {
+      this[name] = opt.bind(this);
+
+      if (opts.commands == null) {
+        this.commands[name] = opt.bind(this);
+      }
+    } else {
+      this[name] = opt;
+    }
+  }, this);
+
+  if (opts.commands) {
+    var cmds;
+
+    if (_.isFunction(opts.commands)) {
+      cmds = opts.commands.call(this);
+    } else {
+      cmds = opts.commands;
+    }
+
+    if (_.isObject(cmds)) {
+      this.commands = cmds;
+    } else {
+      var err = "#commands must be an object ";
+      err += "or a function that returns an object";
+      throw new Error(err);
+    }
+  }
+
+  var mode = Utils.fetch(Config, "mode", "manual");
+
+  if (mode === "auto") {
+    // run on the next tick, to allow for "work" event handlers to be set up
+    setTimeout(this.start, 0);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.api" id="apidoc.element.cylon.api">
+        function <span class="apidocSignatureSpan">cylon.</span>api
+        <span class="apidocSignatureSpan">(Server, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function create(Server, opts) {
+  // if only passed options (or nothing), assume HTTP server
+  if (Server == null || _.isObject(Server) &amp;&amp; !_.isFunction(Server)) {
+    opts = Server;
+    Server = "http";
+  }
+
+  opts = opts || {};
+
+  if (_.isString(Server)) {
+    var req = "cylon-api-" + Server;
+
+    try {
+      Server = require(req);
+    } catch (e) {
+      if (e.code !== "MODULE_NOT_FOUND") {
+        throw e;
+      }
+
+      [
+        "Cannot find the " + req + " API module.",
+        "You may be able to install it: `npm install " + req + "`"
+      ].forEach(Logger.log);
+
+      throw new Error("Missing API plugin - cannot proceed");
+    }
+  }
+
+  opts.mcp = MCP;
+
+  var instance = new Server(opts);
+  api.instances.push(instance);
+  instance.start();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Then it can be used in scripts:
+
+```javascript
+var Cylon = require('cylon');
+
+// tell the HTTP API plugin to listen for requests at https://localhost:4000
+Cylon.<span class="apidocCodeKeywordSpan">api</span>("http", { port: 4000 });
+
+var bots = [
+  { port: '/dev/rfcomm0', name: 'Thelma' },
+  { port: '/dev/rfcomm1', name: 'Louise' }
+];
+
+bots.forEach(function(bot) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.basestar" id="apidoc.element.cylon.basestar">
+        function <span class="apidocSignatureSpan">cylon.</span>basestar
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Basestar() {
+  Utils.classCallCheck(this, Basestar);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.config" id="apidoc.element.cylon.config">
+        function <span class="apidocSignatureSpan">cylon.</span>config
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function update(data) {
+  var forbidden = ["update", "subscribe", "unsubscribe"];
+
+  Object.keys(data).forEach(function(key) {
+    if (~forbidden.indexOf(key)) { delete data[key]; }
+  });
+
+  if (!Object.keys(data).length) {
+    return config;
+  }
+
+  _.extend(config, data);
+
+  callbacks.forEach(function(callback) { callback(data); });
+
+  return config;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.halt" id="apidoc.element.cylon.halt">
+        function <span class="apidocSignatureSpan">cylon.</span>halt
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function halt(callback) {
+  callback = callback || function() {};
+
+  var timeout = setTimeout(callback, Config.haltTimeout || 3000);
+
+  _.parallel(_.pluck(mcp.robots, "halt"), function() {
+    clearTimeout(timeout);
+    callback();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+config: require("./lib/config").update,
+
+start: MCP.start,
+halt: MCP.halt
+};
+
+process.on("SIGINT", function() {
+MCP.<span class="apidocCodeKeywordSpan">halt</span>(process.kill.bind(process, process.pid));
+});
+
+if (process.platform === "win32") {
+var io = { input: process.stdin, output: process.stdout },
+    quit = process.emit.bind(process, "SIGINT");
+
+require("readline").createInterface(io).on("SIGINT", quit);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.robot" id="apidoc.element.cylon.robot">
+        function <span class="apidocSignatureSpan">cylon.</span>robot
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function create(opts) {
+  opts = opts || {};
+
+  // check if a robot with the same name exists already
+  if (opts.name &amp;&amp; mcp.robots[opts.name]) {
+    var original = opts.name;
+    opts.name = Utils.makeUnique(original, Object.keys(mcp.robots));
+
+    var str = "Robot names must be unique. Renaming '";
+    str += original + "' to '" + opts.name + "'";
+
+    Logger.log(str);
+  }
+
+  var bot = new Robot(opts);
+  mcp.robots[bot.name] = bot;
+  mcp.emit("robot_added", bot.name);
+
+  return bot;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+can be obtained either through the Ardunio IDE or the `gort arduino upload
+firmata` command available in [gort](http://gort.io).
+
+```javascript
+var Cylon = require('cylon');
+
+// define the robot
+var robot = Cylon.<span class="apidocCodeKeywordSpan">robot</span>({
+// change the port to the correct one for your Arduino
+connections: {
+  arduino: { adaptor: 'firmata', port: '/dev/ttyACM0' }
+},
+
+devices: {
+  led: { driver: 'led', pin: 13 }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.start" id="apidoc.element.cylon.start">
+        function <span class="apidocSignatureSpan">cylon.</span>start
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function start(callback) {
+  var fns = _.pluck(mcp.robots, "start");
+
+  _.parallel(fns, function() {
+    var mode = Utils.fetch(Config, "workMode", "async");
+    if (mode === "sync") { _.invoke(mcp.robots, "startWork"); }
+    callback();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  work: function(my) {
+    every((1).second(), my.led.toggle);
+  }
+});
+
+// connect to the Arduino and start working
+robot.<span class="apidocCodeKeywordSpan">start</span>();
+```
+
+### Parrot ARDrone 2.0
+
+```javascript
+var Cylon = require('cylon');
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon.Adaptor" id="apidoc.module.cylon.Adaptor">module cylon.Adaptor</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Adaptor.Adaptor" id="apidoc.element.cylon.Adaptor.Adaptor">
+        function <span class="apidocSignatureSpan">cylon.</span>Adaptor
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Adaptor(opts) {
+  Adaptor.__super__.constructor.apply(this, arguments);
+
+  opts = opts || {};
+
+  this.name = opts.name;
+
+  // the Robot the adaptor belongs to
+  this.robot = opts.robot;
+
+  // some default options
+  this.host = opts.host;
+  this.port = opts.port;
+
+  // misc. details provided in args hash
+  this.details = {};
+
+  _.each(opts, function(opt, name) {
+    if (!_.includes(["robot", "name", "adaptor", "events"], name)) {
+      this.details[name] = opt;
+    }
+  }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Adaptor.EventEmitter" id="apidoc.element.cylon.Adaptor.EventEmitter">
+        function <span class="apidocSignatureSpan">cylon.Adaptor.</span>EventEmitter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Adaptor.init" id="apidoc.element.cylon.Adaptor.init">
+        function <span class="apidocSignatureSpan">cylon.Adaptor.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  this.domain = null;
+  if (EventEmitter.usingDomains) {
+    // if there is an active domain, then attach to it.
+    domain = domain || require('domain');
+    if (domain.active &amp;&amp; !(this instanceof domain.Domain)) {
+      this.domain = domain.active;
+    }
+  }
+
+  if (!this._events || this._events === Object.getPrototypeOf(this)._events) {
+    this._events = new EventHandlers();
+    this._eventsCount = 0;
+  }
+
+  this._maxListeners = this._maxListeners || undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Adaptor.listenerCount" id="apidoc.element.cylon.Adaptor.listenerCount">
+        function <span class="apidocSignatureSpan">cylon.Adaptor.</span>listenerCount
+        <span class="apidocSignatureSpan">(emitter, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenerCount = function (emitter, type) {
+  if (typeof emitter.listenerCount === 'function') {
+    return emitter.listenerCount(type);
+  } else {
+    return listenerCount.call(emitter, type);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon.Adaptor.__super__" id="apidoc.module.cylon.Adaptor.__super__">module cylon.Adaptor.__super__</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Adaptor.__super__._proxyEvents" id="apidoc.element.cylon.Adaptor.__super__._proxyEvents">
+        function <span class="apidocSignatureSpan">cylon.Adaptor.__super__.</span>_proxyEvents
+        <span class="apidocSignatureSpan">(opts, source, target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_proxyEvents = function (opts, source, target) {
+  opts = _.isString(opts) ? { eventName: opts } : opts;
+
+  opts.source = source;
+  opts.target = target;
+
+  return this.defineEvent(opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*
+* Proxies events from an adaptor's connector to the adaptor itself.
+*
+* @param {Object} opts proxy options
+* @return {EventEmitter} the adaptor's connector
+*/
+Basestar.prototype.defineAdaptorEvent = function(opts) {
+ return this.<span class="apidocCodeKeywordSpan">_proxyEvents</span>(opts, this.connector, this);
+};
+
+/**
+* A #defineEvent shorthand for drivers.
+*
+* Proxies events from an driver's connection to the driver itself.
+*
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Adaptor.__super__.constructor" id="apidoc.element.cylon.Adaptor.__super__.constructor">
+        function <span class="apidocSignatureSpan">cylon.Adaptor.__super__.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Basestar() {
+  Utils.classCallCheck(this, Basestar);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Adaptor.__super__.defineAdaptorEvent" id="apidoc.element.cylon.Adaptor.__super__.defineAdaptorEvent">
+        function <span class="apidocSignatureSpan">cylon.Adaptor.__super__.</span>defineAdaptorEvent
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defineAdaptorEvent = function (opts) {
+  return this._proxyEvents(opts, this.connector, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Adaptor.__super__.defineDriverEvent" id="apidoc.element.cylon.Adaptor.__super__.defineDriverEvent">
+        function <span class="apidocSignatureSpan">cylon.Adaptor.__super__.</span>defineDriverEvent
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defineDriverEvent = function (opts) {
+  return this._proxyEvents(opts, this.connection, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Adaptor.__super__.defineEvent" id="apidoc.element.cylon.Adaptor.__super__.defineEvent">
+        function <span class="apidocSignatureSpan">cylon.Adaptor.__super__.</span>defineEvent
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defineEvent = function (opts) {
+  opts.sendUpdate = opts.sendUpdate || false;
+  opts.targetEventName = opts.targetEventName || opts.eventName;
+
+  opts.source.on(opts.eventName, function() {
+    var args = arguments.length &gt;= 1 ? [].slice.call(arguments, 0) : [];
+    args.unshift(opts.targetEventName);
+    opts.target.emit.apply(opts.target, args);
+
+    if (opts.sendUpdate) {
+      args.unshift("update");
+      opts.target.emit.apply(opts.target, args);
+    }
+  });
+
+  return opts.source;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Basestar.prototype._proxyEvents = function(opts, source, target) {
+  opts = _.isString(opts) ? { eventName: opts } : opts;
+
+  opts.source = source;
+  opts.target = target;
+
+  return this.<span class="apidocCodeKeywordSpan">defineEvent</span>(opts);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Adaptor.__super__.proxyMethods" id="apidoc.element.cylon.Adaptor.__super__.proxyMethods">
+        function <span class="apidocSignatureSpan">cylon.Adaptor.__super__.</span>proxyMethods
+        <span class="apidocSignatureSpan">(methods, target, base, force)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">proxyMethods = function (methods, target, base, force) {
+  if (base == null) {
+    base = this;
+  }
+
+  force = force || false;
+
+  methods.forEach(function(method) {
+    if (_.isFunction(base[method]) &amp;&amp; !force) {
+      return;
+    }
+
+    base[method] = function() {
+      return target[method].apply(target, arguments);
+    };
+  });
+
+  return base;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Adaptor.__super__.respond" id="apidoc.element.cylon.Adaptor.__super__.respond">
+        function <span class="apidocSignatureSpan">cylon.Adaptor.__super__.</span>respond
+        <span class="apidocSignatureSpan">(event, callback, err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">respond = function (event, callback, err) {
+  var args = Array.prototype.slice.call(arguments, 3);
+
+  if (err) {
+    this.emit("error", err);
+  } else {
+    this.emit.apply(this, [event].concat(args));
+  }
+
+  if (typeof callback === "function") {
+    callback.apply(this, [err].concat(args));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon.Adaptor.prototype" id="apidoc.module.cylon.Adaptor.prototype">module cylon.Adaptor.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Adaptor.prototype.connect" id="apidoc.element.cylon.Adaptor.prototype.connect">
+        function <span class="apidocSignatureSpan">cylon.Adaptor.prototype.</span>connect
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connect = function () {
+  var message = formatErrorMessage(
+    this.name,
+    "Adaptor#connect method must be overwritten by descendant classes."
+  );
+
+  throw new Error(message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Adaptor.prototype.constructor" id="apidoc.element.cylon.Adaptor.prototype.constructor">
+        function <span class="apidocSignatureSpan">cylon.Adaptor.prototype.</span>constructor
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Adaptor(opts) {
+  Adaptor.__super__.constructor.apply(this, arguments);
+
+  opts = opts || {};
+
+  this.name = opts.name;
+
+  // the Robot the adaptor belongs to
+  this.robot = opts.robot;
+
+  // some default options
+  this.host = opts.host;
+  this.port = opts.port;
+
+  // misc. details provided in args hash
+  this.details = {};
+
+  _.each(opts, function(opt, name) {
+    if (!_.includes(["robot", "name", "adaptor", "events"], name)) {
+      this.details[name] = opt;
+    }
+  }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Adaptor.prototype.disconnect" id="apidoc.element.cylon.Adaptor.prototype.disconnect">
+        function <span class="apidocSignatureSpan">cylon.Adaptor.prototype.</span>disconnect
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">disconnect = function () {
+  var message = formatErrorMessage(
+    this.name,
+    "Adaptor#disconnect method must be overwritten by descendant classes."
+  );
+
+  throw new Error(message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Adaptor.prototype.toJSON" id="apidoc.element.cylon.Adaptor.prototype.toJSON">
+        function <span class="apidocSignatureSpan">cylon.Adaptor.prototype.</span>toJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toJSON = function () {
+  return {
+    name: this.name,
+    adaptor: this.constructor.name || this.name,
+    details: this.details
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon.Driver" id="apidoc.module.cylon.Driver">module cylon.Driver</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Driver.Driver" id="apidoc.element.cylon.Driver.Driver">
+        function <span class="apidocSignatureSpan">cylon.</span>Driver
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Driver(opts) {
+  Driver.__super__.constructor.apply(this, arguments);
+
+  opts = opts || {};
+
+  this.name = opts.name;
+  this.robot = opts.robot;
+
+  this.connection = opts.connection;
+
+  this.commands = {};
+  this.events = [];
+
+  // some default options
+  this.pin = opts.pin;
+  this.interval = opts.interval || 10;
+
+  this.details = {};
+
+  _.each(opts, function(opt, name) {
+    var banned = ["robot", "name", "connection", "driver", "events"];
+
+    if (!_.includes(banned, name)) {
+      this.details[name] = opt;
+    }
+  }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Driver.EventEmitter" id="apidoc.element.cylon.Driver.EventEmitter">
+        function <span class="apidocSignatureSpan">cylon.Driver.</span>EventEmitter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Driver.init" id="apidoc.element.cylon.Driver.init">
+        function <span class="apidocSignatureSpan">cylon.Driver.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  this.domain = null;
+  if (EventEmitter.usingDomains) {
+    // if there is an active domain, then attach to it.
+    domain = domain || require('domain');
+    if (domain.active &amp;&amp; !(this instanceof domain.Domain)) {
+      this.domain = domain.active;
+    }
+  }
+
+  if (!this._events || this._events === Object.getPrototypeOf(this)._events) {
+    this._events = new EventHandlers();
+    this._eventsCount = 0;
+  }
+
+  this._maxListeners = this._maxListeners || undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Driver.listenerCount" id="apidoc.element.cylon.Driver.listenerCount">
+        function <span class="apidocSignatureSpan">cylon.Driver.</span>listenerCount
+        <span class="apidocSignatureSpan">(emitter, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenerCount = function (emitter, type) {
+  if (typeof emitter.listenerCount === 'function') {
+    return emitter.listenerCount(type);
+  } else {
+    return listenerCount.call(emitter, type);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon.Driver.prototype" id="apidoc.module.cylon.Driver.prototype">module cylon.Driver.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Driver.prototype.constructor" id="apidoc.element.cylon.Driver.prototype.constructor">
+        function <span class="apidocSignatureSpan">cylon.Driver.prototype.</span>constructor
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Driver(opts) {
+  Driver.__super__.constructor.apply(this, arguments);
+
+  opts = opts || {};
+
+  this.name = opts.name;
+  this.robot = opts.robot;
+
+  this.connection = opts.connection;
+
+  this.commands = {};
+  this.events = [];
+
+  // some default options
+  this.pin = opts.pin;
+  this.interval = opts.interval || 10;
+
+  this.details = {};
+
+  _.each(opts, function(opt, name) {
+    var banned = ["robot", "name", "connection", "driver", "events"];
+
+    if (!_.includes(banned, name)) {
+      this.details[name] = opt;
+    }
+  }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Driver.prototype.halt" id="apidoc.element.cylon.Driver.prototype.halt">
+        function <span class="apidocSignatureSpan">cylon.Driver.prototype.</span>halt
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">halt = function () {
+  var message = formatErrorMessage(
+    this.name,
+    "Driver#halt method must be overwritten by descendant classes."
+  );
+
+  throw new Error(message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+config: require("./lib/config").update,
+
+start: MCP.start,
+halt: MCP.halt
+};
+
+process.on("SIGINT", function() {
+MCP.<span class="apidocCodeKeywordSpan">halt</span>(process.kill.bind(process, process.pid));
+});
+
+if (process.platform === "win32") {
+var io = { input: process.stdin, output: process.stdout },
+    quit = process.emit.bind(process, "SIGINT");
+
+require("readline").createInterface(io).on("SIGINT", quit);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Driver.prototype.setupCommands" id="apidoc.element.cylon.Driver.prototype.setupCommands">
+        function <span class="apidocSignatureSpan">cylon.Driver.prototype.</span>setupCommands
+        <span class="apidocSignatureSpan">(commands, proxy)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setupCommands = function (commands, proxy) {
+  if (proxy == null) {
+    proxy = this.connection;
+  }
+
+  Utils.proxyFunctionsToObject(commands, proxy, this);
+
+  function endsWith(string, substr) {
+    return string.indexOf(substr, string.length - substr.length) !== -1;
+  }
+
+  commands.forEach(function(command) {
+    var snakeCase = command.replace(/[A-Z]+/g, function(match) {
+      if (match.length &gt; 1 &amp;&amp; !endsWith(command, match)) {
+        match = match.replace(/[A-Z]$/, function(m) {
+          return "_" + m.toLowerCase();
+        });
+      }
+
+      return "_" + match.toLowerCase();
+    }).replace(/^_/, "");
+
+    this.commands[snakeCase] = this[command];
+  }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Driver.prototype.start" id="apidoc.element.cylon.Driver.prototype.start">
+        function <span class="apidocSignatureSpan">cylon.Driver.prototype.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function () {
+  var message = formatErrorMessage(
+    this.name,
+    "Driver#start method must be overwritten by descendant classes."
+  );
+
+  throw new Error(message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  work: function(my) {
+    every((1).second(), my.led.toggle);
+  }
+});
+
+// connect to the Arduino and start working
+robot.<span class="apidocCodeKeywordSpan">start</span>();
+```
+
+### Parrot ARDrone 2.0
+
+```javascript
+var Cylon = require('cylon');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Driver.prototype.toJSON" id="apidoc.element.cylon.Driver.prototype.toJSON">
+        function <span class="apidocSignatureSpan">cylon.Driver.prototype.</span>toJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toJSON = function () {
+  return {
+    name: this.name,
+    driver: this.constructor.name || this.name,
+    connection: this.connection.name,
+    commands: Object.keys(this.commands),
+    events: this.events,
+    details: this.details
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon.IO" id="apidoc.module.cylon.IO">module cylon.IO</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin" id="apidoc.element.cylon.IO.DigitalPin">
+        function <span class="apidocSignatureSpan">cylon.IO.</span>DigitalPin
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DigitalPin(opts) {
+  this.pinNum = opts.pin.toString();
+  this.status = "low";
+  this.ready = false;
+  this.mode = opts.mode;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon.IO.DigitalPin" id="apidoc.module.cylon.IO.DigitalPin">module cylon.IO.DigitalPin</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.DigitalPin" id="apidoc.element.cylon.IO.DigitalPin.DigitalPin">
+        function <span class="apidocSignatureSpan">cylon.IO.</span>DigitalPin
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DigitalPin(opts) {
+  this.pinNum = opts.pin.toString();
+  this.status = "low";
+  this.ready = false;
+  this.mode = opts.mode;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.EventEmitter" id="apidoc.element.cylon.IO.DigitalPin.EventEmitter">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.</span>EventEmitter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.init" id="apidoc.element.cylon.IO.DigitalPin.init">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  this.domain = null;
+  if (EventEmitter.usingDomains) {
+    // if there is an active domain, then attach to it.
+    domain = domain || require('domain');
+    if (domain.active &amp;&amp; !(this instanceof domain.Domain)) {
+      this.domain = domain.active;
+    }
+  }
+
+  if (!this._events || this._events === Object.getPrototypeOf(this)._events) {
+    this._events = new EventHandlers();
+    this._eventsCount = 0;
+  }
+
+  this._maxListeners = this._maxListeners || undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.listenerCount" id="apidoc.element.cylon.IO.DigitalPin.listenerCount">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.</span>listenerCount
+        <span class="apidocSignatureSpan">(emitter, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenerCount = function (emitter, type) {
+  if (typeof emitter.listenerCount === 'function') {
+    return emitter.listenerCount(type);
+  } else {
+    return listenerCount.call(emitter, type);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon.IO.DigitalPin.prototype" id="apidoc.module.cylon.IO.DigitalPin.prototype">module cylon.IO.DigitalPin.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.prototype._closeCallback" id="apidoc.element.cylon.IO.DigitalPin.prototype._closeCallback">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>_closeCallback
+        <span class="apidocSignatureSpan">(err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_closeCallback = function (err) {
+  if (err) {
+    this.emit("error", "Error while closing pin files");
+  } else {
+    this.emit("close", this.pinNum);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.prototype._createGPIOPin" id="apidoc.element.cylon.IO.DigitalPin.prototype._createGPIOPin">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>_createGPIOPin
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_createGPIOPin = function () {
+  FS.writeFile(this._exportPath(), this.pinNum, function(err) {
+    if (err) {
+      this.emit("error", "Error while creating pin files");
+    } else {
+      this._openPin();
+    }
+  }.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.prototype._directionPath" id="apidoc.element.cylon.IO.DigitalPin.prototype._directionPath">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>_directionPath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_directionPath = function () {
+  return this._pinPath() + "/direction";
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.prototype._exportPath" id="apidoc.element.cylon.IO.DigitalPin.prototype._exportPath">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>_exportPath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_exportPath = function () {
+  return GPIO_PATH + "/export";
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.prototype._openPin" id="apidoc.element.cylon.IO.DigitalPin.prototype._openPin">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>_openPin
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_openPin = function () {
+  this._setMode(this.mode, true);
+  this.emit("open");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.prototype._pinPath" id="apidoc.element.cylon.IO.DigitalPin.prototype._pinPath">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>_pinPath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_pinPath = function () {
+  return GPIO_PATH + "/gpio" + this.pinNum;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.prototype._setMode" id="apidoc.element.cylon.IO.DigitalPin.prototype._setMode">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>_setMode
+        <span class="apidocSignatureSpan">(mode, emitConnect)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_setMode = function (mode, emitConnect) {
+  if (emitConnect == null) { emitConnect = false; }
+
+  this.mode = mode;
+
+  var data = (mode === "w") ? GPIO_WRITE : GPIO_READ;
+
+  FS.writeFile(this._directionPath(), data, function(err) {
+    this._setModeCallback(err, emitConnect);
+  }.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.prototype._setModeCallback" id="apidoc.element.cylon.IO.DigitalPin.prototype._setModeCallback">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>_setModeCallback
+        <span class="apidocSignatureSpan">(err, emitConnect)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_setModeCallback = function (err, emitConnect) {
+  if (err) {
+    return this.emit("error", "Setting up pin direction failed");
+  }
+
+  this.ready = true;
+
+  if (emitConnect) {
+    this.emit("connect", this.mode);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.prototype._unexportPath" id="apidoc.element.cylon.IO.DigitalPin.prototype._unexportPath">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>_unexportPath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_unexportPath = function () {
+  return GPIO_PATH + "/unexport";
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.prototype._valuePath" id="apidoc.element.cylon.IO.DigitalPin.prototype._valuePath">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>_valuePath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_valuePath = function () {
+  return this._pinPath() + "/value";
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.prototype.close" id="apidoc.element.cylon.IO.DigitalPin.prototype.close">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>close
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">close = function () {
+  FS.writeFile(this._unexportPath(), this.pinNum, function(err) {
+    this._closeCallback(err);
+  }.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.prototype.closeSync" id="apidoc.element.cylon.IO.DigitalPin.prototype.closeSync">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>closeSync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">closeSync = function () {
+  FS.writeFileSync(this._unexportPath(), this.pinNum);
+  this._closeCallback(false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.prototype.connect" id="apidoc.element.cylon.IO.DigitalPin.prototype.connect">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>connect
+        <span class="apidocSignatureSpan">(mode)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connect = function (mode) {
+  if (this.mode == null) {
+    this.mode = mode;
+  }
+
+  FS.exists(this._pinPath(), function(exists) {
+    if (exists) {
+      this._openPin();
+    } else {
+      this._createGPIOPin();
+    }
+  }.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.prototype.constructor" id="apidoc.element.cylon.IO.DigitalPin.prototype.constructor">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>constructor
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DigitalPin(opts) {
+  this.pinNum = opts.pin.toString();
+  this.status = "low";
+  this.ready = false;
+  this.mode = opts.mode;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.prototype.digitalRead" id="apidoc.element.cylon.IO.DigitalPin.prototype.digitalRead">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>digitalRead
+        <span class="apidocSignatureSpan">(interval)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">digitalRead = function (interval) {
+  if (this.mode !== "r") { this._setMode("r"); }
+
+  Utils.every(interval, function() {
+    FS.readFile(this._valuePath(), function(err, data) {
+      if (err) {
+        var error = "Error occurred while reading from pin " + this.pinNum;
+        this.emit("error", error);
+      } else {
+        var readData = parseInt(data.toString(), 10);
+        this.emit("digitalRead", readData);
+      }
+    }.bind(this));
+  }.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.prototype.digitalWrite" id="apidoc.element.cylon.IO.DigitalPin.prototype.digitalWrite">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>digitalWrite
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">digitalWrite = function (value) {
+  if (this.mode !== "w") {
+    this._setMode("w");
+  }
+
+  this.status = value === 1 ? "high" : "low";
+
+  FS.writeFile(this._valuePath(), value, function(err) {
+    if (err) {
+      var str = "Error occurred while writing value ";
+      str += value + " to pin " + this.pinNum;
+
+      this.emit("error", str);
+    } else {
+      this.emit("digitalWrite", value);
+    }
+  }.bind(this));
+
+  return value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.prototype.setHigh" id="apidoc.element.cylon.IO.DigitalPin.prototype.setHigh">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>setHigh
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setHigh = function () {
+  return this.digitalWrite(1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.prototype.setLow" id="apidoc.element.cylon.IO.DigitalPin.prototype.setLow">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>setLow
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setLow = function () {
+  return this.digitalWrite(0);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.DigitalPin.prototype.toggle" id="apidoc.element.cylon.IO.DigitalPin.prototype.toggle">
+        function <span class="apidocSignatureSpan">cylon.IO.DigitalPin.prototype.</span>toggle
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toggle = function () {
+  return (this.status === "low") ? this.setHigh() : this.setLow();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Cylon
+  .robot()
+  .connection('arduino', { adaptor: 'firmata', port: '/dev/ttyACM0' })
+  .device('led', { driver: 'led', pin: 13 })
+  .on('ready', function(bot) {
+    setInterval(function() {
+      bot.led.<span class="apidocCodeKeywordSpan">toggle</span>();
+    }, 1000);
+  });
+
+Cylon.start();
+```
+
+## Hardware Support
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon.IO.Utils" id="apidoc.module.cylon.IO.Utils">module cylon.IO.Utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.IO.Utils.periodAndDuty" id="apidoc.element.cylon.IO.Utils.periodAndDuty">
+        function <span class="apidocSignatureSpan">cylon.IO.Utils.</span>periodAndDuty
+        <span class="apidocSignatureSpan">(scaledDuty, freq, pulseWidth, polarity)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">periodAndDuty = function (scaledDuty, freq, pulseWidth, polarity) {
+  var period, duty, maxDuty;
+
+  polarity = polarity || "high";
+  period = Math.round(1.0e9 / freq);
+
+  if (pulseWidth != null) {
+    var pulseWidthMin = pulseWidth.min * 1000,
+        pulseWidthMax = pulseWidth.max * 1000;
+
+    maxDuty = pulseWidthMax - pulseWidthMin;
+    duty = Math.round(pulseWidthMin + (maxDuty * scaledDuty));
+  } else {
+    duty = Math.round(period * scaledDuty);
+  }
+
+  if (polarity === "low") {
+    duty = period - duty;
+  }
+
+  return { period: period, duty: duty };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon.Logger" id="apidoc.module.cylon.Logger">module cylon.Logger</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Logger.debug" id="apidoc.element.cylon.Logger.debug">
+        function <span class="apidocSignatureSpan">cylon.Logger.</span>debug
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function debug(str) {
+  if (Logger.should.log &amp;&amp; Logger.should.debug) {
+    Logger.logger.call(Logger.logger, str);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+return this.data[module].module;
+  },
+
+  logRegistration: function(name) {
+var module = this.data[name];
+
+Logger.<span class="apidocCodeKeywordSpan">debug</span>("Registering module " + name);
+
+["adaptors", "drivers", "dependencies"].forEach(function(field) {
+  if (module[field].length) {
+    Logger.debug("  " + field + ":");
+    module[field].forEach(function(item) {
+      Logger.debug("    - " + item);
+    });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Logger.error" id="apidoc.element.cylon.Logger.error">
+        function <span class="apidocSignatureSpan">cylon.Logger.</span>error
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">error = function () {
+  if (!called) { showDeprecationNotice(); }
+  Logger.log.apply(null, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Logger.fatal" id="apidoc.element.cylon.Logger.fatal">
+        function <span class="apidocSignatureSpan">cylon.Logger.</span>fatal
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fatal = function () {
+  if (!called) { showDeprecationNotice(); }
+  Logger.log.apply(null, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Logger.info" id="apidoc.element.cylon.Logger.info">
+        function <span class="apidocSignatureSpan">cylon.Logger.</span>info
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">info = function () {
+  if (!called) { showDeprecationNotice(); }
+  Logger.log.apply(null, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Logger.log" id="apidoc.element.cylon.Logger.log">
+        function <span class="apidocSignatureSpan">cylon.Logger.</span>log
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function log(str) {
+  if (Logger.should.log) {
+    Logger.logger.call(Logger.logger, str);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      my.z = hand.palmZ.fromScale(-300, 300).toScale(30, 150);
+    });
+
+    every(100, function() {
+      my.servo1.angle(my.x);
+      my.servo2.angle(my.z);
+
+      console.<span class="apidocCodeKeywordSpan">log</span>(my.servo1.currentAngle() + ", " + my.servo2.currentAngle());
+    });
+  }
+}).start();
+```
+
+### Multiple Spheros + HTTP API Plugin
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Logger.logger" id="apidoc.element.cylon.Logger.logger">
+        function <span class="apidocSignatureSpan">cylon.Logger.</span>logger
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function basiclogger(str) {
+  var prefix = new Date().toISOString() + " : ";
+  console.log(prefix + str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Logger.setup" id="apidoc.element.cylon.Logger.setup">
+        function <span class="apidocSignatureSpan">cylon.Logger.</span>setup
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setup(opts) {
+  if (_.isObject(opts)) { _.extend(Config, opts); }
+
+  var logger = Config.logger;
+
+  // if no logger supplied, use basic logger
+  if (logger == null) { logger = BasicLogger; }
+
+  // if logger is still falsy, use NullLogger
+  Logger.logger = logger || NullLogger;
+
+  Logger.should.log = !Config.silent;
+  Logger.should.debug = Config.debug;
+
+  // --silent CLI flag overrides
+  if (_.includes(process.argv, "--silent")) {
+    Logger.should.log = false;
+  }
+
+  // --debug CLI flag overrides
+  if (_.includes(process.argv, "--debug")) {
+    Logger.should.debug = false;
+  }
+
+  return Logger;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Logger.warn" id="apidoc.element.cylon.Logger.warn">
+        function <span class="apidocSignatureSpan">cylon.Logger.</span>warn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">warn = function () {
+  if (!called) { showDeprecationNotice(); }
+  Logger.log.apply(null, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon.MCP" id="apidoc.module.cylon.MCP">module cylon.MCP</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.MCP.create" id="apidoc.element.cylon.MCP.create">
+        function <span class="apidocSignatureSpan">cylon.MCP.</span>create
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function create(opts) {
+  opts = opts || {};
+
+  // check if a robot with the same name exists already
+  if (opts.name &amp;&amp; mcp.robots[opts.name]) {
+    var original = opts.name;
+    opts.name = Utils.makeUnique(original, Object.keys(mcp.robots));
+
+    var str = "Robot names must be unique. Renaming '";
+    str += original + "' to '" + opts.name + "'";
+
+    Logger.log(str);
+  }
+
+  var bot = new Robot(opts);
+  mcp.robots[bot.name] = bot;
+  mcp.emit("robot_added", bot.name);
+
+  return bot;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.MCP.halt" id="apidoc.element.cylon.MCP.halt">
+        function <span class="apidocSignatureSpan">cylon.MCP.</span>halt
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function halt(callback) {
+  callback = callback || function() {};
+
+  var timeout = setTimeout(callback, Config.haltTimeout || 3000);
+
+  _.parallel(_.pluck(mcp.robots, "halt"), function() {
+    clearTimeout(timeout);
+    callback();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+config: require("./lib/config").update,
+
+start: MCP.start,
+halt: MCP.halt
+};
+
+process.on("SIGINT", function() {
+MCP.<span class="apidocCodeKeywordSpan">halt</span>(process.kill.bind(process, process.pid));
+});
+
+if (process.platform === "win32") {
+var io = { input: process.stdin, output: process.stdout },
+    quit = process.emit.bind(process, "SIGINT");
+
+require("readline").createInterface(io).on("SIGINT", quit);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.MCP.start" id="apidoc.element.cylon.MCP.start">
+        function <span class="apidocSignatureSpan">cylon.MCP.</span>start
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function start(callback) {
+  var fns = _.pluck(mcp.robots, "start");
+
+  _.parallel(fns, function() {
+    var mode = Utils.fetch(Config, "workMode", "async");
+    if (mode === "sync") { _.invoke(mcp.robots, "startWork"); }
+    callback();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  work: function(my) {
+    every((1).second(), my.led.toggle);
+  }
+});
+
+// connect to the Arduino and start working
+robot.<span class="apidocCodeKeywordSpan">start</span>();
+```
+
+### Parrot ARDrone 2.0
+
+```javascript
+var Cylon = require('cylon');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.MCP.toJSON" id="apidoc.element.cylon.MCP.toJSON">
+        function <span class="apidocSignatureSpan">cylon.MCP.</span>toJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toJSON = function () {
+  return {
+    robots: _.invoke(mcp.robots, "toJSON"),
+    commands: Object.keys(mcp.commands),
+    events: mcp.events
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon.Robot" id="apidoc.module.cylon.Robot">module cylon.Robot</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Robot.Robot" id="apidoc.element.cylon.Robot.Robot">
+        function <span class="apidocSignatureSpan">cylon.</span>Robot
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Robot(opts) {
+  Utils.classCallCheck(this, Robot);
+
+  opts = opts || {};
+
+  validator.validate(opts);
+
+  // auto-bind prototype methods
+  for (var prop in Object.getPrototypeOf(this)) {
+    if (this[prop] &amp;&amp; prop !== "constructor") {
+      this[prop] = this[prop].bind(this);
+    }
+  }
+
+  this.initRobot(opts);
+
+  _.each(opts, function(opt, name) {
+    if (this[name] !== undefined) {
+      return;
+    }
+
+    if (_.isFunction(opt)) {
+      this[name] = opt.bind(this);
+
+      if (opts.commands == null) {
+        this.commands[name] = opt.bind(this);
+      }
+    } else {
+      this[name] = opt;
+    }
+  }, this);
+
+  if (opts.commands) {
+    var cmds;
+
+    if (_.isFunction(opts.commands)) {
+      cmds = opts.commands.call(this);
+    } else {
+      cmds = opts.commands;
+    }
+
+    if (_.isObject(cmds)) {
+      this.commands = cmds;
+    } else {
+      var err = "#commands must be an object ";
+      err += "or a function that returns an object";
+      throw new Error(err);
+    }
+  }
+
+  var mode = Utils.fetch(Config, "mode", "manual");
+
+  if (mode === "auto") {
+    // run on the next tick, to allow for "work" event handlers to be set up
+    setTimeout(this.start, 0);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Robot.EventEmitter" id="apidoc.element.cylon.Robot.EventEmitter">
+        function <span class="apidocSignatureSpan">cylon.Robot.</span>EventEmitter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Robot.init" id="apidoc.element.cylon.Robot.init">
+        function <span class="apidocSignatureSpan">cylon.Robot.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  this.domain = null;
+  if (EventEmitter.usingDomains) {
+    // if there is an active domain, then attach to it.
+    domain = domain || require('domain');
+    if (domain.active &amp;&amp; !(this instanceof domain.Domain)) {
+      this.domain = domain.active;
+    }
+  }
+
+  if (!this._events || this._events === Object.getPrototypeOf(this)._events) {
+    this._events = new EventHandlers();
+    this._eventsCount = 0;
+  }
+
+  this._maxListeners = this._maxListeners || undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Robot.listenerCount" id="apidoc.element.cylon.Robot.listenerCount">
+        function <span class="apidocSignatureSpan">cylon.Robot.</span>listenerCount
+        <span class="apidocSignatureSpan">(emitter, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenerCount = function (emitter, type) {
+  if (typeof emitter.listenerCount === 'function') {
+    return emitter.listenerCount(type);
+  } else {
+    return listenerCount.call(emitter, type);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon.Robot.prototype" id="apidoc.module.cylon.Robot.prototype">module cylon.Robot.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Robot.prototype.connection" id="apidoc.element.cylon.Robot.prototype.connection">
+        function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>connection
+        <span class="apidocSignatureSpan">(name, conn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connection = function (name, conn) {
+  conn.robot = this;
+  conn.name = name;
+
+  if (this.connections[conn.name]) {
+    var original = conn.name,
+        str;
+
+    conn.name = Utils.makeUnique(original, Object.keys(this.connections));
+
+    str = "Connection names must be unique.";
+    str += "Renaming '" + original + "' to '" + conn.name + "'";
+    this.log(str);
+  }
+  if ("adapter" in conn) {
+    conn.adaptor = conn.adapter;
+  }
+  this.connections[conn.name] = initializer("adaptor", conn);
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+```javascript
+var Cylon = require('cylon');
+
+Cylon
+.robot()
+.<span class="apidocCodeKeywordSpan">connection</span>('arduino', { adaptor: 'firmata', port: '/dev/ttyACM0
+' })
+.device('led', { driver: 'led', pin: 13 })
+.on('ready', function(bot) {
+  setInterval(function() {
+    bot.led.toggle();
+  }, 1000);
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Robot.prototype.constructor" id="apidoc.element.cylon.Robot.prototype.constructor">
+        function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>constructor
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Robot(opts) {
+  Utils.classCallCheck(this, Robot);
+
+  opts = opts || {};
+
+  validator.validate(opts);
+
+  // auto-bind prototype methods
+  for (var prop in Object.getPrototypeOf(this)) {
+    if (this[prop] &amp;&amp; prop !== "constructor") {
+      this[prop] = this[prop].bind(this);
+    }
+  }
+
+  this.initRobot(opts);
+
+  _.each(opts, function(opt, name) {
+    if (this[name] !== undefined) {
+      return;
+    }
+
+    if (_.isFunction(opt)) {
+      this[name] = opt.bind(this);
+
+      if (opts.commands == null) {
+        this.commands[name] = opt.bind(this);
+      }
+    } else {
+      this[name] = opt;
+    }
+  }, this);
+
+  if (opts.commands) {
+    var cmds;
+
+    if (_.isFunction(opts.commands)) {
+      cmds = opts.commands.call(this);
+    } else {
+      cmds = opts.commands;
+    }
+
+    if (_.isObject(cmds)) {
+      this.commands = cmds;
+    } else {
+      var err = "#commands must be an object ";
+      err += "or a function that returns an object";
+      throw new Error(err);
+    }
+  }
+
+  var mode = Utils.fetch(Config, "mode", "manual");
+
+  if (mode === "auto") {
+    // run on the next tick, to allow for "work" event handlers to be set up
+    setTimeout(this.start, 0);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Robot.prototype.device" id="apidoc.element.cylon.Robot.prototype.device">
+        function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>device
+        <span class="apidocSignatureSpan">(name, device)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">device = function (name, device) {
+  var str;
+
+  device.robot = this;
+  device.name = name;
+
+  if (this.devices[device.name]) {
+    var original = device.name;
+    device.name = Utils.makeUnique(original, Object.keys(this.devices));
+
+    str = "Device names must be unique.";
+    str += "Renaming '" + original + "' to '" + device.name + "'";
+    this.log(str);
+  }
+
+  if (_.isString(device.connection)) {
+    if (this.connections[device.connection] == null) {
+      str = "No connection found with the name " + device.connection + ".\n";
+      this.log(str);
+      process.emit("SIGINT");
+    }
+
+    device.connection = this.connections[device.connection];
+  } else {
+    for (var c in this.connections) {
+      device.connection = this.connections[c];
+      break;
+    }
+  }
+
+  this.devices[device.name] = initializer("driver", device);
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```javascript
+var Cylon = require('cylon');
+
+Cylon
+  .robot()
+  .connection('arduino', { adaptor: 'firmata', port: '/dev/ttyACM0' })
+  .<span class="apidocCodeKeywordSpan">device</span>('led', { driver: 'led', pin: 13 })
+  .on('ready', function(bot) {
+    setInterval(function() {
+      bot.led.toggle();
+    }, 1000);
+  });
+
+Cylon.start();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Robot.prototype.halt" id="apidoc.element.cylon.Robot.prototype.halt">
+        function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>halt
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">halt = function (callback) {
+  callback = callback || function() {};
+
+  if (!this.running) {
+    return callback();
+  }
+
+  // ensures callback(err) won't prevent others from halting
+  function wrap(fn) {
+    return function(cb) { fn.call(null, cb.bind(null, null)); };
+  }
+
+  var devices = _.pluck(this.devices, "halt").map(wrap),
+      connections = _.pluck(this.connections, "disconnect").map(wrap);
+
+  try {
+    _.parallel(devices, function() {
+      _.parallel(connections, callback);
+    });
+  } catch (e) {
+    var msg = "An error occured while attempting to safely halt the robot";
+    this.log(msg);
+    this.log(e.message);
+  }
+
+  this.running = false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+config: require("./lib/config").update,
+
+start: MCP.start,
+halt: MCP.halt
+};
+
+process.on("SIGINT", function() {
+MCP.<span class="apidocCodeKeywordSpan">halt</span>(process.kill.bind(process, process.pid));
+});
+
+if (process.platform === "win32") {
+var io = { input: process.stdin, output: process.stdout },
+    quit = process.emit.bind(process, "SIGINT");
+
+require("readline").createInterface(io).on("SIGINT", quit);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Robot.prototype.initRobot" id="apidoc.element.cylon.Robot.prototype.initRobot">
+        function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>initRobot
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initRobot = function (opts) {
+  this.name = opts.name || "Robot " + ROBOT_ID++;
+  this.running = false;
+
+  this.connections = {};
+  this.devices = {};
+
+  this.work = opts.work || opts.play;
+
+  this.commands = {};
+
+  if (!this.work) {
+    this.work = function() { this.log("No work yet."); };
+  }
+
+  _.each(opts.connections, function(conn, key) {
+    var name = _.isString(key) ? key : conn.name;
+
+    if (conn.devices) {
+      opts.devices = opts.devices || {};
+
+      _.each(conn.devices, function(device, d) {
+        device.connection = name;
+        opts.devices[d] = device;
+      });
+
+      delete conn.devices;
+    }
+
+    this.connection(name, _.extend({}, conn));
+  }, this);
+
+  _.each(opts.devices, function(device, key) {
+    var name = _.isString(key) ? key : device.name;
+    this.device(name, _.extend({}, device));
+  }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Robot.prototype.log" id="apidoc.element.cylon.Robot.prototype.log">
+        function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>log
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log = function (str) {
+  Logger.log("[" + this.name + "] - " + str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      my.z = hand.palmZ.fromScale(-300, 300).toScale(30, 150);
+    });
+
+    every(100, function() {
+      my.servo1.angle(my.x);
+      my.servo2.angle(my.z);
+
+      console.<span class="apidocCodeKeywordSpan">log</span>(my.servo1.currentAngle() + ", " + my.servo2.currentAngle());
+    });
+  }
+}).start();
+```
+
+### Multiple Spheros + HTTP API Plugin
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Robot.prototype.start" id="apidoc.element.cylon.Robot.prototype.start">
+        function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>start
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (callback) {
+  if (this.running) {
+    return this;
+  }
+
+  var mode = Utils.fetch(Config, "workMode", "async");
+
+  var start = function() {
+    if (mode === "async") {
+      this.startWork();
+    }
+  }.bind(this);
+
+  _.series([
+    this.startConnections,
+    this.startDevices,
+    start
+  ], function(err, results) {
+    if (err) {
+      this.log("An error occured while trying to start the robot:");
+      this.log(err);
+
+      this.halt(function() {
+        if (_.isFunction(this.error)) {
+          this.error.call(this, err);
+        }
+
+        if (this.listeners("error").length) {
+          this.emit("error", err);
+        }
+      }.bind(this));
+    }
+
+    if (_.isFunction(callback)) {
+      callback(err, results);
+    }
+  }.bind(this));
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  work: function(my) {
+    every((1).second(), my.led.toggle);
+  }
+});
+
+// connect to the Arduino and start working
+robot.<span class="apidocCodeKeywordSpan">start</span>();
+```
+
+### Parrot ARDrone 2.0
+
+```javascript
+var Cylon = require('cylon');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Robot.prototype.startConnection" id="apidoc.element.cylon.Robot.prototype.startConnection">
+        function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>startConnection
+        <span class="apidocSignatureSpan">(connection, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startConnection = function (connection, callback) {
+  if (connection.connected === true) {
+    return callback.call(connection);
+  }
+
+  var str = "Starting connection '" + connection.name + "'";
+
+  if (connection.host) {
+    str += " on host " + connection.host;
+  } else if (connection.port) {
+    str += " on port " + connection.port;
+  }
+
+  this.log(str + ".");
+  this[connection.name] = connection;
+  connection.connect.call(connection, callback);
+  connection.connected = true;
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Robot.prototype.startConnections" id="apidoc.element.cylon.Robot.prototype.startConnections">
+        function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>startConnections
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startConnections = function (callback) {
+  this.log("Starting connections.");
+
+  var starters = _.map(this.connections, function(conn) {
+    return function(cb) {
+      return this.startConnection(conn, cb);
+    }.bind(this);
+  }, this);
+
+  return _.parallel(starters, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Robot.prototype.startDevice" id="apidoc.element.cylon.Robot.prototype.startDevice">
+        function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>startDevice
+        <span class="apidocSignatureSpan">(device, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startDevice = function (device, callback) {
+  if (device.started === true) {
+    return callback.call(device);
+  }
+
+  var log = this.log;
+  var str = "Starting device '" + device.name + "'";
+
+  if (device.pin) {
+    str += " on pin " + device.pin;
+  }
+
+  log(str + ".");
+  this[device.name] = device;
+  device.start.call(device, callback);
+  device.started = true;
+
+  return device.started;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Robot.prototype.startDevices" id="apidoc.element.cylon.Robot.prototype.startDevices">
+        function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>startDevices
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startDevices = function (callback) {
+  var log = this.log;
+
+  log("Starting devices.");
+
+  var starters = _.map(this.devices, function(device) {
+    return function(cb) {
+      return this.startDevice(device, cb);
+    }.bind(this);
+  }, this);
+
+  return _.parallel(starters, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Robot.prototype.startWork" id="apidoc.element.cylon.Robot.prototype.startWork">
+        function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>startWork
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startWork = function () {
+  this.log("Working.");
+
+  this.emit("ready", this);
+  this.work.call(this, this);
+  this.running = true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Robot.prototype.toJSON" id="apidoc.element.cylon.Robot.prototype.toJSON">
+        function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>toJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toJSON = function () {
+  return {
+    name: this.name,
+    connections: _.invoke(this.connections, "toJSON"),
+    devices: _.invoke(this.devices, "toJSON"),
+    commands: Object.keys(this.commands),
+    events: _.isArray(this.events) ? this.events : []
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Robot.prototype.toString" id="apidoc.element.cylon.Robot.prototype.toString">
+        function <span class="apidocSignatureSpan">cylon.Robot.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  return "[Robot name='" + this.name + "']";
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon.Utils" id="apidoc.module.cylon.Utils">module cylon.Utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Utils.after" id="apidoc.element.cylon.Utils.after">
+        function <span class="apidocSignatureSpan">cylon.Utils.</span>after
+        <span class="apidocSignatureSpan">(delay, action)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function after(delay, action) {
+  return setTimeout(action, delay);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Utils.bootstrap" id="apidoc.element.cylon.Utils.bootstrap">
+        function <span class="apidocSignatureSpan">cylon.Utils.</span>bootstrap
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function bootstrap() {
+  global.every = this.every;
+  global.after = this.after;
+  global.constantly = this.constantly;
+
+  monkeyPatches.install();
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Utils.classCallCheck" id="apidoc.element.cylon.Utils.classCallCheck">
+        function <span class="apidocSignatureSpan">cylon.Utils.</span>classCallCheck
+        <span class="apidocSignatureSpan">(instance, Constructor)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">classCallCheck = function (instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* The Basestar class is a wrapper class around EventEmitter that underpins most
+* other Cylon adaptor/driver classes, providing useful external base methods
+* and functionality.
+*
+* @constructor Basestar
+*/
+var Basestar = module.exports = function Basestar() {
+ Utils.<span class="apidocCodeKeywordSpan">classCallCheck</span>(this, Basestar);
+};
+
+Utils.subclass(Basestar, EventEmitter);
+
+/**
+* Proxies calls from all methods in the source to a target object
+*
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Utils.constantly" id="apidoc.element.cylon.Utils.constantly">
+        function <span class="apidocSignatureSpan">cylon.Utils.</span>constantly
+        <span class="apidocSignatureSpan">(action)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function constantly(action) {
+  return every(0, action);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Utils.every" id="apidoc.element.cylon.Utils.every">
+        function <span class="apidocSignatureSpan">cylon.Utils.</span>every
+        <span class="apidocSignatureSpan">(interval, action)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function every(interval, action) {
+  return setInterval(action, interval);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Utils.fetch" id="apidoc.element.cylon.Utils.fetch">
+        function <span class="apidocSignatureSpan">cylon.Utils.</span>fetch
+        <span class="apidocSignatureSpan">(obj, property, fallback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fetch = function (obj, property, fallback) {
+  if (obj.hasOwnProperty(property)) {
+    return obj[property];
+  }
+
+  if (fallback === void 0) {
+    throw new Error("key not found: \"" + property + "\"");
+  }
+
+  if (_.isFunction(fallback)) {
+    var value = fallback(property);
+
+    if (value === void 0) {
+      throw new Error("no return value from provided fallback function");
+    }
+
+    return value;
+  }
+
+  return fallback;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Utils.finish" id="apidoc.element.cylon.Utils.finish">
+        function <span class="apidocSignatureSpan">cylon.Utils.</span>finish
+        <span class="apidocSignatureSpan">(intervalID)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function finish(intervalID) {
+  clearInterval(intervalID);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Utils.makeUnique" id="apidoc.element.cylon.Utils.makeUnique">
+        function <span class="apidocSignatureSpan">cylon.Utils.</span>makeUnique
+        <span class="apidocSignatureSpan">(name, arr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">makeUnique = function (name, arr) {
+  var newName;
+
+  if (!~arr.indexOf(name)) {
+    return name;
+  }
+
+  for (var n = 1; ; n++) {
+    newName = name + "-" + n;
+    if (!~arr.indexOf(newName)) {
+      return newName;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Utils.proxyFunctions" id="apidoc.element.cylon.Utils.proxyFunctions">
+        function <span class="apidocSignatureSpan">cylon.Utils.</span>proxyFunctions
+        <span class="apidocSignatureSpan">(source, target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function proxyFunctions(source, target) {
+  _.each(source, function(prop, key) {
+    if (_.isFunction(prop) &amp;&amp; !target[key]) {
+      target[key] = prop.bind(source);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Utils.proxyFunctionsToObject" id="apidoc.element.cylon.Utils.proxyFunctionsToObject">
+        function <span class="apidocSignatureSpan">cylon.Utils.</span>proxyFunctionsToObject
+        <span class="apidocSignatureSpan">(methods, target, base, force)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">proxyFunctionsToObject = function (methods, target, base, force) {
+  if (base == null) {
+    base = this;
+  }
+
+  force = force || false;
+
+  methods.forEach(function(method) {
+    if (_.isFunction(base[method]) &amp;&amp; !force) {
+      return;
+    }
+
+    base[method] = function() {
+      return target[method].apply(target, arguments);
+    };
+  });
+
+  return base;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Utils.sleep" id="apidoc.element.cylon.Utils.sleep">
+        function <span class="apidocSignatureSpan">cylon.Utils.</span>sleep
+        <span class="apidocSignatureSpan">(ms)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sleep(ms) {
+  var start = Date.now(),
+      i = 0;
+
+  while (Date.now() &lt; start + ms) {
+    i = i.toString();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.Utils.subclass" id="apidoc.element.cylon.Utils.subclass">
+        function <span class="apidocSignatureSpan">cylon.Utils.</span>subclass
+        <span class="apidocSignatureSpan">(child, parent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function subclass(child, parent) {
+  var Ctor = function() {
+    this.constructor = child;
+  };
+
+  for (var key in parent) {
+    if (parent.hasOwnProperty(key)) {
+      child[key] = parent[key];
+    }
+  }
+
+  Ctor.prototype = parent.prototype;
+  child.prototype = new Ctor();
+  child.__super__ = parent.prototype;
+  return child;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*
+* @constructor Basestar
+*/
+var Basestar = module.exports = function Basestar() {
+ Utils.classCallCheck(this, Basestar);
+};
+
+Utils.<span class="apidocCodeKeywordSpan">subclass</span>(Basestar, EventEmitter);
+
+/**
+* Proxies calls from all methods in the source to a target object
+*
+* @param {String[]} methods methods to proxy
+* @param {Object} target object to proxy methods to
+* @param {Object} source object to proxy methods from
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon.api" id="apidoc.module.cylon.api">module cylon.api</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.api.create" id="apidoc.element.cylon.api.create">
+        function <span class="apidocSignatureSpan">cylon.api.</span>create
+        <span class="apidocSignatureSpan">(Server, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function create(Server, opts) {
+  // if only passed options (or nothing), assume HTTP server
+  if (Server == null || _.isObject(Server) &amp;&amp; !_.isFunction(Server)) {
+    opts = Server;
+    Server = "http";
+  }
+
+  opts = opts || {};
+
+  if (_.isString(Server)) {
+    var req = "cylon-api-" + Server;
+
+    try {
+      Server = require(req);
+    } catch (e) {
+      if (e.code !== "MODULE_NOT_FOUND") {
+        throw e;
+      }
+
+      [
+        "Cannot find the " + req + " API module.",
+        "You may be able to install it: `npm install " + req + "`"
+      ].forEach(Logger.log);
+
+      throw new Error("Missing API plugin - cannot proceed");
+    }
+  }
+
+  opts.mcp = MCP;
+
+  var instance = new Server(opts);
+  api.instances.push(instance);
+  instance.start();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon.basestar" id="apidoc.module.cylon.basestar">module cylon.basestar</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.basestar.basestar" id="apidoc.element.cylon.basestar.basestar">
+        function <span class="apidocSignatureSpan">cylon.</span>basestar
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Basestar() {
+  Utils.classCallCheck(this, Basestar);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.basestar.EventEmitter" id="apidoc.element.cylon.basestar.EventEmitter">
+        function <span class="apidocSignatureSpan">cylon.basestar.</span>EventEmitter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.basestar.init" id="apidoc.element.cylon.basestar.init">
+        function <span class="apidocSignatureSpan">cylon.basestar.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  this.domain = null;
+  if (EventEmitter.usingDomains) {
+    // if there is an active domain, then attach to it.
+    domain = domain || require('domain');
+    if (domain.active &amp;&amp; !(this instanceof domain.Domain)) {
+      this.domain = domain.active;
+    }
+  }
+
+  if (!this._events || this._events === Object.getPrototypeOf(this)._events) {
+    this._events = new EventHandlers();
+    this._eventsCount = 0;
+  }
+
+  this._maxListeners = this._maxListeners || undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.basestar.listenerCount" id="apidoc.element.cylon.basestar.listenerCount">
+        function <span class="apidocSignatureSpan">cylon.basestar.</span>listenerCount
+        <span class="apidocSignatureSpan">(emitter, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenerCount = function (emitter, type) {
+  if (typeof emitter.listenerCount === 'function') {
+    return emitter.listenerCount(type);
+  } else {
+    return listenerCount.call(emitter, type);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon.config" id="apidoc.module.cylon.config">module cylon.config</a></h1>
+
+
+
+
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.config.subscribe" id="apidoc.element.cylon.config.subscribe">
+        function <span class="apidocSignatureSpan">cylon.config.</span>subscribe
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function subscribe(callback) {
+  callbacks.push(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.config.unsubscribe" id="apidoc.element.cylon.config.unsubscribe">
+        function <span class="apidocSignatureSpan">cylon.config.</span>unsubscribe
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function unsubscribe(callback) {
+  var idx = callbacks.indexOf(callback);
+  if (idx &gt;= 0) { callbacks.splice(idx, 1); }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.config.update" id="apidoc.element.cylon.config.update">
+        function <span class="apidocSignatureSpan">cylon.config.</span>update
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function update(data) {
+  var forbidden = ["update", "subscribe", "unsubscribe"];
+
+  Object.keys(data).forEach(function(key) {
+    if (~forbidden.indexOf(key)) { delete data[key]; }
+  });
+
+  if (!Object.keys(data).length) {
+    return config;
+  }
+
+  _.extend(config, data);
+
+  callbacks.forEach(function(callback) { callback(data); });
+
+  return config;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon.helpers" id="apidoc.module.cylon.helpers">module cylon.helpers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.helpers.arity" id="apidoc.element.cylon.helpers.arity">
+        function <span class="apidocSignatureSpan">cylon.helpers.</span>arity
+        <span class="apidocSignatureSpan">(fn, n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function arity(fn, n) {
+  return function() {
+    var args = __slice.call(arguments, 0, n);
+    return fn.apply(null, args);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.helpers.each" id="apidoc.element.cylon.helpers.each">
+        function <span class="apidocSignatureSpan">cylon.helpers.</span>each
+        <span class="apidocSignatureSpan">(thing, fn, thisVal)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function iterate(thing, fn, thisVal) {
+  if (H.isArray(thing)) {
+    thing.forEach(fn, thisVal);
+    return;
+  }
+
+  if (H.isObject(thing)) {
+    for (var key in thing) {
+      var value = thing[key];
+      fn.call(thisVal, value, key);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (!mod) {
+var err = [ "Unable to find", type, "for", opts[type] ].join(" ");
+throw new Error(err);
+  }
+
+  var obj = mod[type](opts);
+
+  _.<span class="apidocCodeKeywordSpan">each</span>(obj, function(prop, name) {
+if (name === "constructor") {
+  return;
+}
+
+if (_.isFunction(prop)) {
+  obj[name] = prop.bind(obj);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.helpers.extend" id="apidoc.element.cylon.helpers.extend">
+        function <span class="apidocSignatureSpan">cylon.helpers.</span>extend
+        <span class="apidocSignatureSpan">(base, source)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extend(base, source) {
+  var isArray = Array.isArray(source);
+
+  if (base == null) {
+    base = isArray ? [] : {};
+  }
+
+  if (isArray) {
+    source.forEach(function(e, i) {
+      if (typeof base[i] === "undefined") {
+        base[i] = e;
+      } else if (typeof e === "object") {
+        base[i] = extend(base[i], e);
+      } else if (!~base.indexOf(e)) {
+        base.push(e);
+      }
+    });
+  } else {
+    var key;
+
+    for (key in source) {
+      if (typeof source[key] !== "object" || !source[key]) {
+        base[key] = source[key];
+      } else if (base[key]) {
+        extend(base[key], source[key]);
+      } else {
+        base[key] = source[key];
+      }
+    }
+  }
+
+  return base;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    if (~forbidden.indexOf(key)) { delete data[key]; }
+  });
+
+  if (!Object.keys(data).length) {
+    return config;
+  }
+
+  _.<span class="apidocCodeKeywordSpan">extend</span>(config, data);
+
+  callbacks.forEach(function(callback) { callback(data); });
+
+  return config;
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.helpers.identity" id="apidoc.element.cylon.helpers.identity">
+        function <span class="apidocSignatureSpan">cylon.helpers.</span>identity
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function identity(value) {
+  return value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.helpers.includes" id="apidoc.element.cylon.helpers.includes">
+        function <span class="apidocSignatureSpan">cylon.helpers.</span>includes
+        <span class="apidocSignatureSpan">(arr, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function includes(arr, value) {
+  return !!~arr.indexOf(value);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+},
+
+search: function(entry, value) {
+  for (var name in this.data) {
+    if (this.data.hasOwnProperty(name)) {
+      var repo = this.data[name];
+
+      if (repo[entry] &amp;&amp; _.<span class="apidocCodeKeywordSpan">includes</span>(repo[entry], value)) {
+        return repo.module;
+      }
+    }
+  }
+
+  return false;
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.helpers.invoke" id="apidoc.element.cylon.helpers.invoke">
+        function <span class="apidocSignatureSpan">cylon.helpers.</span>invoke
+        <span class="apidocSignatureSpan">(collection, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function invoke(collection, fn) {
+  var args = __slice.call(arguments, 2),
+      vals = [];
+
+  iterate(collection, function(object) {
+    if (H.isFunction(fn)) {
+      vals.push(fn.apply(object, args));
+      return;
+    }
+
+    vals.push(object[fn].apply(object, arguments));
+  });
+
+  return vals;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.helpers.isArguments" id="apidoc.element.cylon.helpers.isArguments">
+        function <span class="apidocSignatureSpan">cylon.helpers.</span>isArguments
+        <span class="apidocSignatureSpan">(thing)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isArguments = function (thing) {
+  return kind(thing) === type;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.helpers.isArray" id="apidoc.element.cylon.helpers.isArray">
+        function <span class="apidocSignatureSpan">cylon.helpers.</span>isArray
+        <span class="apidocSignatureSpan">(thing)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isArray = function (thing) {
+  return kind(thing) === type;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var H = module.exports = {};
+
+function identity(value) {
+return value;
+}
+
+function extend(base, source) {
+var isArray = Array.<span class="apidocCodeKeywordSpan">isArray</span>(source);
+
+if (base == null) {
+  base = isArray ? [] : {};
+}
+
+if (isArray) {
+  source.forEach(function(e, i) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.helpers.isFunction" id="apidoc.element.cylon.helpers.isFunction">
+        function <span class="apidocSignatureSpan">cylon.helpers.</span>isFunction
+        <span class="apidocSignatureSpan">(thing)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isFunction = function (thing) {
+  return kind(thing) === type;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {String} [Server] which API plugin to use (e.g. "http" loads
+ * cylon-api-http)
+ * @param {Object} opts options for the new API instance
+ * @return {void}
+ */
+api.create = function create(Server, opts) {
+// if only passed options (or nothing), assume HTTP server
+if (Server == null || _.isObject(Server) &amp;&amp; !_.<span class="apidocCodeKeywordSpan">isFunction</span>(Server)) {
+  opts = Server;
+  Server = "http";
+}
+
+opts = opts || {};
+
+if (_.isString(Server)) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.helpers.isNumber" id="apidoc.element.cylon.helpers.isNumber">
+        function <span class="apidocSignatureSpan">cylon.helpers.</span>isNumber
+        <span class="apidocSignatureSpan">(thing)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isNumber = function (thing) {
+  return kind(thing) === type;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.helpers.isObject" id="apidoc.element.cylon.helpers.isObject">
+        function <span class="apidocSignatureSpan">cylon.helpers.</span>isObject
+        <span class="apidocSignatureSpan">(thing)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isObject = function (thing) {
+  return kind(thing) === type;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {String} [Server] which API plugin to use (e.g. "http" loads
+ * cylon-api-http)
+ * @param {Object} opts options for the new API instance
+ * @return {void}
+ */
+api.create = function create(Server, opts) {
+// if only passed options (or nothing), assume HTTP server
+if (Server == null || _.<span class="apidocCodeKeywordSpan">isObject</span>(Server) &amp;&amp; !_.isFunction(Server)) {
+  opts = Server;
+  Server = "http";
+}
+
+opts = opts || {};
+
+if (_.isString(Server)) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.helpers.isObjectLoose" id="apidoc.element.cylon.helpers.isObjectLoose">
+        function <span class="apidocSignatureSpan">cylon.helpers.</span>isObjectLoose
+        <span class="apidocSignatureSpan">(thing)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isObjectLoose = function (thing) { return typeof thing === "object"; }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+return vals;
+}
+
+function reduce(collection, iteratee, accumulator, thisVal) {
+var isArray = H.isArray(collection);
+
+if (!isArray &amp;&amp; !H.<span class="apidocCodeKeywordSpan">isObjectLoose</span>(collection)) {
+  return null;
+}
+
+if (iteratee == null) {
+  iteratee = identity;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.helpers.isString" id="apidoc.element.cylon.helpers.isString">
+        function <span class="apidocSignatureSpan">cylon.helpers.</span>isString
+        <span class="apidocSignatureSpan">(thing)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isString = function (thing) {
+  return kind(thing) === type;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (Server == null || _.isObject(Server) &amp;&amp; !_.isFunction(Server)) {
+opts = Server;
+Server = "http";
+  }
+
+  opts = opts || {};
+
+  if (_.<span class="apidocCodeKeywordSpan">isString</span>(Server)) {
+var req = "cylon-api-" + Server;
+
+try {
+  Server = require(req);
+} catch (e) {
+  if (e.code !== "MODULE_NOT_FOUND") {
+    throw e;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.helpers.isUndefined" id="apidoc.element.cylon.helpers.isUndefined">
+        function <span class="apidocSignatureSpan">cylon.helpers.</span>isUndefined
+        <span class="apidocSignatureSpan">(thing)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isUndefined = function (thing) {
+  return kind(thing) === type;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.helpers.map" id="apidoc.element.cylon.helpers.map">
+        function <span class="apidocSignatureSpan">cylon.helpers.</span>map
+        <span class="apidocSignatureSpan">(collection, fn, thisVal)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function map(collection, fn, thisVal) {
+  var vals = [];
+
+  if (fn == null) {
+    fn = identity;
+  }
+
+  iterate(collection, function(object, index) {
+    vals.push(fn.call(thisVal, object, index));
+  });
+
+  return vals;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var RobotDSLError = new Error("Unable to start robot due to a syntax error");
+  RobotDSLError.name = "RobotDSLError";
+  throw RobotDSLError;
+}
+
+function warn(messages) {
+  messages = [].concat(messages);
+  messages.<span class="apidocCodeKeywordSpan">map</span>(function(msg) { Logger.log(msg); });
+}
+
+function fatal(messages) {
+  messages = [].concat(messages);
+  messages.map(function(msg) { Logger.log(msg); });
+  die();
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.helpers.parallel" id="apidoc.element.cylon.helpers.parallel">
+        function <span class="apidocSignatureSpan">cylon.helpers.</span>parallel
+        <span class="apidocSignatureSpan">(functions, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parallel(functions, done) {
+  var total = functions.length,
+      completed = 0,
+      results = [],
+      error;
+
+  if (typeof done !== "function") { done = function() {}; }
+
+  function callback(err, result) {
+    if (error) {
+      return;
+    }
+
+    if (err || error) {
+      error = err;
+      done(err);
+      return;
+    }
+
+    completed++;
+    results.push(result);
+
+    if (completed === total) {
+      done(null, results);
+    }
+  }
+
+  if (!functions.length) { done(); }
+
+  functions.forEach(function(fn) { fn(callback); });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.helpers.partial" id="apidoc.element.cylon.helpers.partial">
+        function <span class="apidocSignatureSpan">cylon.helpers.</span>partial
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function partial(fn) {
+  var args = __slice.call(arguments, 1);
+
+  return function() {
+    return fn.apply(null, args.concat(__slice.call(arguments)));
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.helpers.partialRight" id="apidoc.element.cylon.helpers.partialRight">
+        function <span class="apidocSignatureSpan">cylon.helpers.</span>partialRight
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function partialRight(fn) {
+  var args = __slice.call(arguments, 1);
+
+  return function() {
+    return fn.apply(null, __slice.call(arguments).concat(args));
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.helpers.pluck" id="apidoc.element.cylon.helpers.pluck">
+        function <span class="apidocSignatureSpan">cylon.helpers.</span>pluck
+        <span class="apidocSignatureSpan">(collection, key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pluck(collection, key) {
+  var keys = [];
+
+  iterate(collection, function(object) {
+    if (H.isObject(object)) {
+      if (H.isFunction(object[key])) {
+        keys.push(object[key].bind(object));
+      } else {
+        keys.push(object[key]);
+      }
+    }
+  });
+
+  return keys;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.helpers.reduce" id="apidoc.element.cylon.helpers.reduce">
+        function <span class="apidocSignatureSpan">cylon.helpers.</span>reduce
+        <span class="apidocSignatureSpan">(collection, iteratee, accumulator, thisVal)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reduce(collection, iteratee, accumulator, thisVal) {
+  var isArray = H.isArray(collection);
+
+  if (!isArray &amp;&amp; !H.isObjectLoose(collection)) {
+    return null;
+  }
+
+  if (iteratee == null) {
+    iteratee = identity;
+  }
+
+  if (accumulator == null) {
+    if (isArray) {
+      accumulator = collection.shift();
+    } else {
+      for (var key in collection) {
+        accumulator = collection[key];
+        delete collection[key];
+        break;
+      }
+    }
+  }
+
+  iterate(collection, function(object, name) {
+    accumulator = iteratee.call(thisVal, accumulator, object, name);
+  });
+
+  return accumulator;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.helpers.series" id="apidoc.element.cylon.helpers.series">
+        function <span class="apidocSignatureSpan">cylon.helpers.</span>series
+        <span class="apidocSignatureSpan">(functions, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function series(functions, done) {
+  var results = [],
+      error;
+
+  if (typeof done !== "function") { done = function() {}; }
+
+  function callback(err, result) {
+    if (err || error) {
+      error = err;
+      return done(err);
+    }
+
+    results.push(result);
+
+    if (!functions.length) {
+      return done(null, results);
+    }
+
+    next();
+  }
+
+  function next() {
+    functions.shift()(callback);
+  }
+
+  if (!functions.length) { done(null, results); }
+  next();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon.monkey_patches" id="apidoc.module.cylon.monkey_patches">module cylon.monkey_patches</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.monkey_patches.install" id="apidoc.element.cylon.monkey_patches.install">
+        function <span class="apidocSignatureSpan">cylon.monkey_patches.</span>install
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">install = function () {
+<span class="apidocCodeCommentSpan">  /**
+   * Multiplies a number by 60000 to convert minutes
+   * to milliseconds
+   *
+   * @example
+   * (2).minutes(); //=&gt; 120000
+   * @return {Number} time in milliseconds
+   */
+</span>  Number.prototype.minutes = function() {
+    return this * 60000;
+  };
+
+  /**
+   * Alias for Number.prototype.minutes
+   *
+   * @see Number.prototype.minute
+   * @example
+   * (1).minute(); //=&gt;60000
+   * @return {Number} time in milliseconds
+   */
+  Number.prototype.minute = Number.prototype.minutes;
+
+  /**
+   * Multiplies a number by 1000 to convert seconds
+   * to milliseconds
+   *
+   * @example
+   * (2).seconds(); //=&gt; 2000
+   * @return {Number} time in milliseconds
+   */
+  Number.prototype.seconds = function() {
+    return this * 1000;
+  };
+
+  /**
+   * Alias for Number.prototype.seconds
+   *
+   * @see Number.prototype.seconds
+   * @example
+   * (1).second(); //=&gt; 1000
+   * @return {Number} time in milliseconds
+   */
+  Number.prototype.second = Number.prototype.seconds;
+
+  /**
+   * Passthru to get time in milliseconds
+   *
+   * @example
+   * (200).milliseconds(); //=&gt; 200
+   * @return {Number} time in milliseconds
+   */
+  Number.prototype.milliseconds = function() {
+    return this;
+  };
+
+  /**
+   * Alias for Number.prototype.milliseconds
+   *
+   * @see Number.prototype.milliseconds
+   * @example
+   * (100).ms(); //=&gt; 100
+   * @return {Number} time in milliseconds
+   */
+  Number.prototype.ms = Number.prototype.milliseconds;
+
+  /**
+   * Converts microseconds to milliseconds.
+   * Note that timing of events in terms of microseconds
+   * is not very accurate in JS.
+   *
+   * @example
+   * (2000).microseconds(); //=&gt; 2
+   * @return {Number} time in milliseconds
+   */
+  Number.prototype.microseconds = function() {
+    return this / 1000;
+  };
+
+  /**
+   * Converts a number from a current scale to a 0 - 1 scale.
+   *
+   * @param {Number} start low point of scale to convert from
+   * @param {Number} end high point of scale to convert from
+   * @example
+   * (5).fromScale(0, 10) //=&gt; 0.5
+   * @return {Number} the scaled value
+   */
+  Number.prototype.fromScale = function(start, end) {
+    var val = (this - min(start, end)) / (max(start, end) - min(start, end));
+
+    if (val &gt; 1) {
+      return 1;
+    }
+
+    if (val &lt; 0) {
+      return 0;
+    }
+
+    return val;
+  };
+
+  /**
+   * Converts a number from a 0 - 1 scale to the specified scale.
+   *
+   * @param {Number} start low point of scale to convert to
+   * @param {Number} end high point of scale to convert to
+   * @example
+   * (0.5).toScale(0, 10) //=&gt; 5
+   * @return {Number} the scaled value
+   */
+  Number.prototype.toScale = function(start, end) {
+    var i = this * (max(start, end) - min(start, end)) + min(start, end);
+
+    if (i &lt; start) {
+      return start;
+    }
+
+    if (i &gt; end) {
+      return end;
+    }
+
+    return i;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.monkey_patches.uninstall" id="apidoc.element.cylon.monkey_patches.uninstall">
+        function <span class="apidocSignatureSpan">cylon.monkey_patches.</span>uninstall
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uninstall = function () {
+  for (var opt in originals) {
+    if (originals[opt] == null) {
+      Number.prototype[opt] = originals[opt];
+    } else {
+      delete Number.prototype[opt];
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon.registry" id="apidoc.module.cylon.registry">module cylon.registry</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.registry.findBy" id="apidoc.element.cylon.registry.findBy">
+        function <span class="apidocSignatureSpan">cylon.registry.</span>findBy
+        <span class="apidocSignatureSpan">(prop, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findBy = function (prop, name) {
+  // pluralize, if necessary
+  if (prop.slice(-1) !== "s") {
+    prop += "s";
+  }
+
+  return this.search(prop, name);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function testMode() {
+return process.env.NODE_ENV === "test" &amp;&amp; Config.testMode;
+}
+
+module.exports = function Initializer(type, opts) {
+var mod;
+
+mod = Registry.<span class="apidocCodeKeywordSpan">findBy</span>(type, opts[type]);
+
+if (!mod) {
+  if (opts.module) {
+    Registry.register(opts.module);
+  } else {
+    Registry.register("cylon-" + opts[type]);
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.registry.findByModule" id="apidoc.element.cylon.registry.findByModule">
+        function <span class="apidocSignatureSpan">cylon.registry.</span>findByModule
+        <span class="apidocSignatureSpan">(module)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findByModule = function (module) {
+  if (!this.data[module]) {
+    return null;
+  }
+
+  return this.data[module].module;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.registry.isModuleInDevelopment" id="apidoc.element.cylon.registry.isModuleInDevelopment">
+        function <span class="apidocSignatureSpan">cylon.registry.</span>isModuleInDevelopment
+        <span class="apidocSignatureSpan">(module)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isModuleInDevelopment = function (module) {
+  return (path.basename(path.resolve(".")) === module);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (this.data[module]) {
+  return this.data[module].module;
+}
+
+var pkg;
+
+try {
+  if (this.<span class="apidocCodeKeywordSpan">isModuleInDevelopment</span>(module)) {
+    pkg = require(path.resolve(".") + "/index");
+  } else {
+    pkg = require(module);
+  }
+} catch (e) {
+  if (e.code === "MODULE_NOT_FOUND") {
+    missingModuleError(module);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.registry.logRegistration" id="apidoc.element.cylon.registry.logRegistration">
+        function <span class="apidocSignatureSpan">cylon.registry.</span>logRegistration
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">logRegistration = function (name) {
+  var module = this.data[name];
+
+  Logger.debug("Registering module " + name);
+
+  ["adaptors", "drivers", "dependencies"].forEach(function(field) {
+    if (module[field].length) {
+      Logger.debug("  " + field + ":");
+      module[field].forEach(function(item) {
+        Logger.debug("    - " + item);
+      });
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  this.data[module] = {
+    module: pkg,
+    adaptors: pkg.adaptors || [],
+    drivers: pkg.drivers || [],
+    dependencies: pkg.dependencies || []
+  };
+
+  this.<span class="apidocCodeKeywordSpan">logRegistration</span>(module, this.data[module]);
+
+  this.data[module].dependencies.forEach(function(dep) {
+    Registry.register(dep);
+  });
+
+  return this.data[module].module;
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.registry.register" id="apidoc.element.cylon.registry.register">
+        function <span class="apidocSignatureSpan">cylon.registry.</span>register
+        <span class="apidocSignatureSpan">(module)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">register = function (module) {
+  if (this.data[module]) {
+    return this.data[module].module;
+  }
+
+  var pkg;
+
+  try {
+    if (this.isModuleInDevelopment(module)) {
+      pkg = require(path.resolve(".") + "/index");
+    } else {
+      pkg = require(module);
+    }
+  } catch (e) {
+    if (e.code === "MODULE_NOT_FOUND") {
+      missingModuleError(module);
+    }
+
+    throw e;
+  }
+
+  this.data[module] = {
+    module: pkg,
+    adaptors: pkg.adaptors || [],
+    drivers: pkg.drivers || [],
+    dependencies: pkg.dependencies || []
+  };
+
+  this.logRegistration(module, this.data[module]);
+
+  this.data[module].dependencies.forEach(function(dep) {
+    Registry.register(dep);
+  });
+
+  return this.data[module].module;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+module.exports = function Initializer(type, opts) {
+var mod;
+
+mod = Registry.findBy(type, opts[type]);
+
+if (!mod) {
+  if (opts.module) {
+    Registry.<span class="apidocCodeKeywordSpan">register</span>(opts.module);
+  } else {
+    Registry.register("cylon-" + opts[type]);
+  }
+
+  mod = Registry.findBy(type, opts[type]);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.registry.search" id="apidoc.element.cylon.registry.search">
+        function <span class="apidocSignatureSpan">cylon.registry.</span>search
+        <span class="apidocSignatureSpan">(entry, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">search = function (entry, value) {
+  for (var name in this.data) {
+    if (this.data.hasOwnProperty(name)) {
+      var repo = this.data[name];
+
+      if (repo[entry] &amp;&amp; _.includes(repo[entry], value)) {
+        return repo.module;
+      }
+    }
+  }
+
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+findBy: function(prop, name) {
+  // pluralize, if necessary
+  if (prop.slice(-1) !== "s") {
+    prop += "s";
+  }
+
+  return this.<span class="apidocCodeKeywordSpan">search</span>(prop, name);
+},
+
+findByModule: function(module) {
+  if (!this.data[module]) {
+    return null;
+  }
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cylon.validator" id="apidoc.module.cylon.validator">module cylon.validator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cylon.validator.validate" id="apidoc.element.cylon.validator.validate">
+        function <span class="apidocSignatureSpan">cylon.validator.</span>validate
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validate(opts) {
+  opts = opts || {};
+
+  _.each(checks, function(check) {
+    check(opts);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
